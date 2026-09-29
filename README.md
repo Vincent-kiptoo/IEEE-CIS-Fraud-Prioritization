@@ -1,15 +1,13 @@
 # Fraud Risk Scoring for Investigation Prioritization
 ### Cost-Constrained Decisioning on the IEEE-CIS Fraud Detection Benchmark
 
-> An end-to-end fraud-analytics project on temporal/behavioral feature engineering, leakage-safe validation, severe class imbalance, capacity-constrained prioritization, economic decision-making, and investigator-facing explainability — using IEEE-CIS as a research benchmark, with Kenya's digital-payment ecosystem as the motivating context.
+> An end-to-end fraud-analytics project on temporal/behavioral feature engineering, leakage-safe validation, severe class imbalance, capacity-constrained prioritization, economic decision-making, and investigator-facing explainability using IEEE-CIS as a research benchmark, with Kenya's digital-payment ecosystem as the motivating context.
 
 Full scope, assumptions, and methodology: [`docs/project-statement.md`](docs/project-statement.md)
 
 ---
 
 ## Status
-
-*Update this table as phases complete — it's the first thing anyone reading this repo sees.*
 
 | Phase | Description | Status |
 |---|---|---|
@@ -45,7 +43,7 @@ Secondary question: do gains in statistical discrimination (PR-AUC) actually tra
 
 ## Why IEEE-CIS
 
-Kenyan mobile-money fraud data isn't publicly available at the transaction level. IEEE-CIS provides a real-world-shaped benchmark — genuine class imbalance (~3.5% fraud), temporal structure, missing identity records, anonymized behavioral features — for developing transferable fraud-analytics skills, without claiming its data represents Kenyan payment fraud. See [Limitations](#important-limitations).
+Kenyan mobile-money fraud data isn't publicly available at the transaction level. IEEE-CIS provides a real-world-shaped benchmark genuine class imbalance (~3.5% fraud), temporal structure, missing identity records, anonymized behavioral feature for developing transferable fraud-analytics skills, without claiming its data represents Kenyan payment fraud. See [Limitations](#important-limitations).
 
 [Competition page](https://www.kaggle.com/competitions/ieee-fraud-detection) · [Data](https://www.kaggle.com/competitions/ieee-fraud-detection/data)
 
@@ -66,7 +64,7 @@ Kenyan mobile-money fraud data isn't publicly available at the transaction level
 | **Ranking** (at fixed capacity) | Precision@K, Recall@K, fraud value captured@K, at 0.5%/1%/2%/5% review capacity |
 | **Business** | Fraud value captured, investigation cost, estimated loss avoided, net economic benefit |
 
-PR-AUC and ROC-AUC are model diagnostics, not business outcomes — the threshold that ships is the one maximizing net economic benefit under the capacity constraint.
+PR-AUC and ROC-AUC are model diagnostics, not business outcomes the threshold that ships is the one maximizing net economic benefit under the capacity constraint.
 
 ## Technical Constraints
 
@@ -134,7 +132,3 @@ Every economic result is reported with its assumptions and sensitivity range.
 ## Data Use
 
 IEEE-CIS data is subject to [Kaggle's competition rules](https://www.kaggle.com/competitions/ieee-fraud-detection/rules) and is kept out of version control — not redistributed through this repo.
-
-## Project Philosophy
-
-The question this project answers is not *"can I get a high leaderboard score,"* it's *"can I build a fraud-risk system whose predictions remain valid, interpretable, and operationally useful when treated as a real decision system, under real constraints?"*
