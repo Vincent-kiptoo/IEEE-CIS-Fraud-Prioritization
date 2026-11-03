@@ -22,6 +22,3 @@ Thumbs.db
 # Database Files
 *.duckdb
 *.duckdb.wal
-
-# AGENTS INSTRUCTIONS
-AGENTS.md
